@@ -28,6 +28,10 @@ pipeline {
                     "TaskTwo" : {
                         echo 'tasl two stuff part 1'
                         echo 'tasl two stuff part 2'
+                    },
+                    "TaskThree" : {
+                        echo 'tasl two stuff part 1'
+                        echo 'tasl two stuff part 2'
                     }
                     )
 
