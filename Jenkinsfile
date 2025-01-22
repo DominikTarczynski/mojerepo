@@ -17,9 +17,20 @@ pipeline {
                 echo "testing from SCM..."
             }
         }
-        stage('Deploy') {
+        stage('ParallelScript') {
             steps {
-               echo "deploying from SCM..."
+               parallel (
+                    "TaskOne" : {
+                        echo 'task one stuff part 1'
+                        echo 'task one stuff part 2'
+                        echo 'task one stuff part 3'
+                    },
+                    "TaskTwo" : {
+                        echo 'tasl two stuff part 1'
+                        echo 'tasl two stuff part 2'
+                    }
+                    )
+
             }
         }
     }
